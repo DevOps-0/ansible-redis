@@ -31,5 +31,5 @@ script:
 
   # make sure redis can be started and stopped easily
   - sudo service redis-server status
+  - sudo redis-cli shutdown
   - sudo service redis-server start
-  - sudo service redis-server stop
