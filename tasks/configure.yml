@@ -32,6 +32,19 @@
     - precise-configuration
     - redis
 
+- name: Configure | redis-server | maxmemory-policy
+  lineinfile:
+    state: present
+    dest: /etc/redis/redis.conf
+    regexp: '^#* *maxmemory-policy'
+    line: "maxmemory-policy {{ redis_maxmemory_policy }}"
+  notify: Reload Service | redis-server
+  when: redis_maxmemory_policy
+  tags:
+    - configuration
+    - precise-configuration
+    - redis
+
 - name: "Directory Exists | {{ redis_server_working_directory }}"
   file:
     state: directory
