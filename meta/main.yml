@@ -29,10 +29,9 @@ dependencies:
     upstart_user: "{{ redis_user }}"
 galaxy_info:
   author: "Chris Olstrom"
-  categories:
-    - database:nosql
   company: "TELUS digital"
   description: "Redis is an open source, BSD licensed, advanced key-value cache and store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets, sorted sets, bitmaps and hyperloglogs."
+  issue_tracker_url: https://github.com/telusdigital/ansible-redis/issues
   license: MIT
   min_ansible_version: 1.2
   platforms:
@@ -42,3 +41,5 @@ galaxy_info:
         - precise
         - trusty
         - utopic
+  galaxy_tags:
+    - database:nosql
